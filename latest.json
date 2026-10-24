@@ -1,28 +1,28 @@
 {
-  "version": "4.11.0",
-  "tag": "v4.11.0",
+  "version": "4.11.1",
+  "tag": "v4.11.1",
   "released": "2026-10-24",
   "page": "https://yaarilevrosen-cpu.github.io/llm-api-releases/",
-  "notes_en": "The first public release.\n\n- **Windows setup** (one .exe, nothing to install first): its own Python and\n  packages, Ollama from ollama.com, two services that start with the\n  computer, and an uninstaller in Settings > Apps.\n- **Linux and Raspberry Pi**: one command, `curl -fsSL .../install.sh | sh`;\n  the download is checked against its SHA-256 before anything is installed.\n- **Welcome screen** on the first visit, in Hebrew or English, on a phone or a\n  desktop: choose the console password (only on the machine itself), a single\n  machine or a fleet, and a first model sized to your graphics card, with\n  download progress.\n- **Updates**: the console tells you when a new version is out and installs\n  it with one click (checked against its SHA-256, with automatic rollback).\n- Everything from the private versions before it: an OpenAI-compatible API,\n  a console with chat, machines, models, keys and traffic; Hebrew mode with a\n  guard against answers in the wrong script; per-key limits and statistics;\n  several machines as one fleet with automatic failover.",
-  "notes_he": "הגרסה הציבורית הראשונה.\n\n- **התקנה ל־Windows** (קובץ exe אחד, בלי להתקין שום דבר קודם): פייתון וחבילות\n  משלה, Ollama מהאתר ollama.com, שני שירותים שעולים עם המחשב, והסרה דרך\n  הגדרות > אפליקציות.\n- **לינוקס ו־Raspberry Pi**: פקודה אחת, `curl -fsSL .../install.sh | sh`;\n  ההורדה נבדקת מול ה־SHA-256 שלה לפני שמשהו מותקן.\n- **מסך פתיחה** בכניסה הראשונה, בעברית או באנגלית, בטלפון או במחשב: בוחרים\n  סיסמה לקונסולה (רק במכונה עצמה), מכונה אחת או צי, ומודל ראשון שמתאים לכרטיס\n  המסך, עם התקדמות ההורדה.\n- **עדכונים**: הקונסולה מודיעה כשיוצאת גרסה חדשה ומתקינה אותה בלחיצה אחת\n  (נבדקת מול ה־SHA-256 שלה, עם חזרה אוטומטית לגרסה הקודמת אם משהו נכשל).\n- כל מה שהיה בגרסאות הפרטיות שלפניה: API תואם OpenAI, קונסולה עם צ'אט, מכונות,\n  מודלים, מפתחות ותעבורה; מצב עברית עם שמירה מפני תשובות בכתב הלא נכון; מגבלות\n  וסטטיסטיקה לכל מפתח; כמה מכונות כצי אחד עם מעבר אוטומטי כשמכונה נופלת.",
+  "notes_en": "- **Windows, fleets:** when this machine starts a fleet (on the welcome screen)\n  or joins one, the setup adds a Windows Firewall rule that lets other\n  machines reach the API port **only from Tailscale addresses**\n  (100.64.0.0/10 and fd7a:115c:a1e0::/48) - nothing from the local network or\n  the internet. A single machine opens nothing. The uninstaller removes the rule.\n- **Windows:** Tailscale installed after llm-api is found right away, without\n  restarting the computer.",
+  "notes_he": "- **Windows, צי:** כשהמכונה מתחילה צי (במסך הפתיחה) או מצטרפת לצי, ההתקנה מוסיפה\n  כלל בחומת האש של Windows שמאפשר למכונות אחרות להגיע לפורט ה־API **רק מכתובות\n  של Tailscale** (100.64.0.0/10 ו־fd7a:115c:a1e0::/48) - לא מהרשת המקומית ולא\n  מהאינטרנט. מכונה בודדת לא פותחת כלום. ההסרה מוחקת את הכלל.\n- **Windows:** Tailscale שהותקן אחרי llm-api מזוהה מיד, בלי להפעיל מחדש את המחשב.",
   "files": {
     "exe": {
-      "name": "llm-api-setup-4.11.0.exe",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe",
-      "sha256": "901c5805e0cb2e5acc6f9401c253f71ddb8fead8c662a7c45eb299ac190df06e",
-      "size": 29363582
+      "name": "llm-api-setup-4.11.1.exe",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-setup-4.11.1.exe",
+      "sha256": "d13c4bdd96da3b87894f389c88d1586901a4aa2610a05501e53a24f38d214c6c",
+      "size": 29364638
     },
     "tar": {
-      "name": "llm-api-4.11.0.tar.gz",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-4.11.0.tar.gz",
-      "sha256": "63ecf2662e006e7037cb6902c5aa2ba19d3cd20d0009fddf405204025492b0a7",
-      "size": 350354
+      "name": "llm-api-4.11.1.tar.gz",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-4.11.1.tar.gz",
+      "sha256": "b29aa2e3847be4e90a3c7cbf74cd37e188a2a153c46992ec6e7c1f977f62eee7",
+      "size": 352060
     },
     "zip": {
-      "name": "llm-api-4.11.0.zip",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-4.11.0.zip",
-      "sha256": "9a32a2a6a18307a0cb6d089806bc760ca155cb133cd39efb7ae90e881d6eacfe",
-      "size": 372218
+      "name": "llm-api-4.11.1.zip",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-4.11.1.zip",
+      "sha256": "78a9194f979e76d311cc28d776e66fced206ddd9ee863bb5645ff4054c11d278",
+      "size": 374038
     }
   }
 }

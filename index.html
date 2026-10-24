@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>llm-api - הורדה / Download</title>
-<meta name="description" content="llm-api 4.11.0: run AI models on your own computer. Windows, Linux and Raspberry Pi installers.">
+<meta name="description" content="llm-api 4.11.1: run AI models on your own computer. Windows, Linux and Raspberry Pi installers.">
 <style>
 :root{--bg:#f7f7f5;--panel:#fff;--ink:#16181d;--ink-2:#5b616e;--line:#e3e4e8;--accent:#2f6fde;--accent-ink:#fff;
 --code:#f0f1f4;--warn:#8a5a00;--warn-bg:#fff6e0}
@@ -63,7 +63,7 @@ footer a{color:inherit}
   <p><span lang="he">מריצים מודלים מקומית, משתמשים בהם מכל מכשיר עם API תואם OpenAI, ומנהלים הכול מקונסולה בעברית.</span><span lang="en">Run models locally, use them from any device with an OpenAI-compatible API, and manage it all from a console in Hebrew or English.</span></p>
   <div class="cta" id="cta">
     <div data-os="windows">
-      <a class="big" href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe"><span lang="he">הורדה ל־Windows</span><span lang="en">Download for Windows</span><small>4.11.0 · 29.4 MB</small></a>
+      <a class="big" href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-setup-4.11.1.exe"><span lang="he">הורדה ל־Windows</span><span lang="en">Download for Windows</span><small>4.11.1 · 29.4 MB</small></a>
       <div class="meta"><span lang="he">Windows 10 ו־11, 64 ביט. אין צורך להתקין שום דבר קודם.</span><span lang="en">Windows 10 and 11, 64-bit. Nothing to install first.</span></div>
     </div>
     <div data-os="linux" hidden>
@@ -84,7 +84,7 @@ footer a{color:inherit}
   <h2><span lang="he">כל הפלטפורמות</span><span lang="en">Every platform</span></h2>
   <div class="plat">
     <div class="card"><h3>Windows 10 / 11</h3><p><span lang="he">קובץ התקנה אחד, כולל פייתון. מתקין גם את Ollama מ־ollama.com.</span><span lang="en">One setup file, Python included. Also installs Ollama from ollama.com.</span></p>
-      <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe">llm-api-setup-4.11.0.exe</a> <small>(29.4 MB)</small></div>
+      <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-setup-4.11.1.exe">llm-api-setup-4.11.1.exe</a> <small>(29.4 MB)</small></div>
     <div class="card"><h3><span lang="he">לינוקס / Raspberry Pi</span><span lang="en">Linux / Raspberry Pi</span></h3><p><span lang="he"><bdi dir="ltr">Ubuntu 22.04, 24.04, Debian 12, Raspberry Pi OS</bdi> (64 ביט).</span><span lang="en">Ubuntu 22.04 and 24.04, Debian 12, Raspberry Pi OS (64-bit).</span></p>
       <div class="cmd"><code id="curl2">curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh</code><button class="copy" data-copy="curl2" type="button"><span lang="he">העתקה</span><span lang="en">Copy</span></button></div></div>
     <div class="card"><h3>Mac</h3><p><span lang="he">עדיין לא. בינתיים: מתקינים על מחשב אחר ומשתמשים מה־Mac בדפדפן.</span><span lang="en">Not yet. Meanwhile: install on another computer and use it from your Mac in the browser.</span></p></div>
@@ -96,34 +96,32 @@ footer a{color:inherit}
   <p><span lang="he">קובץ ההתקנה עדיין לא חתום דיגיטלית, ולכן Windows SmartScreen מציג אזהרה על ״מפרסם לא ידוע״ בהפעלה הראשונה. זה צפוי. לפני שממשיכים כדאי לוודא שה־SHA-256 של הקובץ שהורדתם זהה לזה שבטבלה למטה.</span><span lang="en">The setup is not code-signed yet, so Windows SmartScreen shows an “unknown publisher” warning the first time it runs. That is expected. Before you continue, you can check that the file's SHA-256 matches the table below.</span></p>
   <div class="steps"><figure><img src="img/smartscreen-1.png" alt="" loading="lazy"><figcaption><span lang="he">1. לוחצים על <b>מידע נוסף</b></span><span lang="en">1. Click <b>More info</b></span></figcaption></figure><figure><img src="img/smartscreen-2.png" alt="" loading="lazy"><figcaption><span lang="he">2. לוחצים על <b>הפעל בכל זאת</b></span><span lang="en">2. Click <b>Run anyway</b></span></figcaption></figure></div><p><small><span lang="he">איור להמחשה של חלון Windows (המראה המדויק משתנה בין גרסאות).</span><span lang="en">An illustration of the Windows dialog (the exact look varies between versions).</span></small></p>
   <p><span lang="he">בדיקת ה־SHA-256 ב־PowerShell:</span><span lang="en">Checking the SHA-256 in PowerShell:</span></p>
-  <div class="cmd"><code>Get-FileHash .\llm-api-setup-4.11.0.exe</code></div>
+  <div class="cmd"><code>Get-FileHash .\llm-api-setup-4.11.1.exe</code></div>
 </section>
 
 <section><h2><span lang="he">מסך הפתיחה</span><span lang="en">The welcome screen</span></h2><p><span lang="he">בכניסה הראשונה לקונסולה: בוחרים סיסמה, מכונה אחת או צי, ומודל ראשון שמתאים לכרטיס המסך.</span><span lang="en">The first time you open the console: choose a password, a single machine or a fleet, and a first model that fits your graphics card.</span></p><div class="shots"><figure><img src="img/welcome-desktop.png" alt="" loading="lazy"><figcaption><span lang="he">במחשב</span><span lang="en">On a desktop</span></figcaption></figure><figure><img src="img/welcome-phone.png" alt="" loading="lazy"><figcaption><span lang="he">בטלפון</span><span lang="en">On a phone</span></figcaption></figure></div></section>
 
 <section>
   <h2><span lang="he">קבצים ו־SHA-256</span><span lang="en">Files and SHA-256</span></h2>
-  <table><thead><tr><th><span lang="he">קובץ</span><span lang="en">File</span></th><th>SHA-256</th></tr></thead><tbody><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe">llm-api-setup-4.11.0.exe</a><br><small>29.4 MB</small></td><td class="h">901c5805e0cb2e5acc6f9401c253f71ddb8fead8c662a7c45eb299ac190df06e</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-4.11.0.tar.gz">llm-api-4.11.0.tar.gz</a><br><small>350 KB</small></td><td class="h">63ecf2662e006e7037cb6902c5aa2ba19d3cd20d0009fddf405204025492b0a7</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-4.11.0.zip">llm-api-4.11.0.zip</a><br><small>372 KB</small></td><td class="h">9a32a2a6a18307a0cb6d089806bc760ca155cb133cd39efb7ae90e881d6eacfe</td></tr></tbody></table>
+  <table><thead><tr><th><span lang="he">קובץ</span><span lang="en">File</span></th><th>SHA-256</th></tr></thead><tbody><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-setup-4.11.1.exe">llm-api-setup-4.11.1.exe</a><br><small>29.4 MB</small></td><td class="h">d13c4bdd96da3b87894f389c88d1586901a4aa2610a05501e53a24f38d214c6c</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-4.11.1.tar.gz">llm-api-4.11.1.tar.gz</a><br><small>352 KB</small></td><td class="h">b29aa2e3847be4e90a3c7cbf74cd37e188a2a153c46992ec6e7c1f977f62eee7</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-4.11.1.zip">llm-api-4.11.1.zip</a><br><small>374 KB</small></td><td class="h">78a9194f979e76d311cc28d776e66fced206ddd9ee863bb5645ff4054c11d278</td></tr></tbody></table>
   <p><small><span lang="he">הקובץ zip הוא אותה תוכנה בלי מתקין (לעדכון ידני). רשימה מלאה:</span><span lang="en">The zip is the same program without an installer (for manual updates). Full list:</span>
-  <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/SHA256SUMS" dir="ltr">SHA256SUMS</a></small></p>
+  <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/SHA256SUMS" dir="ltr">SHA256SUMS</a></small></p>
 </section>
 
 <section>
-  <h2><span lang="he">מה חדש</span><span lang="en">What's new</span> · 4.11.0 <small style="font-weight:400;color:var(--ink-2)">(2026-10-24)</small></h2>
-  <div lang="he"><p>הגרסה הציבורית הראשונה.</p>
-<ul><li><b>התקנה ל־Windows</b> (קובץ exe אחד, בלי להתקין שום דבר קודם): פייתון וחבילות משלה, Ollama מהאתר ollama.com, שני שירותים שעולים עם המחשב, והסרה דרך הגדרות &gt; אפליקציות.</li><li><b>לינוקס ו־Raspberry Pi</b>: פקודה אחת, <code dir="ltr">curl -fsSL .../install.sh | sh</code>; ההורדה נבדקת מול ה־SHA-256 שלה לפני שמשהו מותקן.</li><li><b>מסך פתיחה</b> בכניסה הראשונה, בעברית או באנגלית, בטלפון או במחשב: בוחרים סיסמה לקונסולה (רק במכונה עצמה), מכונה אחת או צי, ומודל ראשון שמתאים לכרטיס המסך, עם התקדמות ההורדה.</li><li><b>עדכונים</b>: הקונסולה מודיעה כשיוצאת גרסה חדשה ומתקינה אותה בלחיצה אחת (נבדקת מול ה־SHA-256 שלה, עם חזרה אוטומטית לגרסה הקודמת אם משהו נכשל).</li><li>כל מה שהיה בגרסאות הפרטיות שלפניה: API תואם OpenAI, קונסולה עם צ'אט, מכונות, מודלים, מפתחות ותעבורה; מצב עברית עם שמירה מפני תשובות בכתב הלא נכון; מגבלות וסטטיסטיקה לכל מפתח; כמה מכונות כצי אחד עם מעבר אוטומטי כשמכונה נופלת.</li></ul></div>
-  <div lang="en" dir="ltr"><p>The first public release.</p>
-<ul><li><b>Windows setup</b> (one .exe, nothing to install first): its own Python and packages, Ollama from ollama.com, two services that start with the computer, and an uninstaller in Settings &gt; Apps.</li><li><b>Linux and Raspberry Pi</b>: one command, <code dir="ltr">curl -fsSL .../install.sh | sh</code>; the download is checked against its SHA-256 before anything is installed.</li><li><b>Welcome screen</b> on the first visit, in Hebrew or English, on a phone or a desktop: choose the console password (only on the machine itself), a single machine or a fleet, and a first model sized to your graphics card, with download progress.</li><li><b>Updates</b>: the console tells you when a new version is out and installs it with one click (checked against its SHA-256, with automatic rollback).</li><li>Everything from the private versions before it: an OpenAI-compatible API, a console with chat, machines, models, keys and traffic; Hebrew mode with a guard against answers in the wrong script; per-key limits and statistics; several machines as one fleet with automatic failover.</li></ul></div>
+  <h2><span lang="he">מה חדש</span><span lang="en">What's new</span> · 4.11.1 <small style="font-weight:400;color:var(--ink-2)">(2026-10-24)</small></h2>
+  <div lang="he"><ul><li><b>Windows, צי:</b> כשהמכונה מתחילה צי (במסך הפתיחה) או מצטרפת לצי, ההתקנה מוסיפה כלל בחומת האש של Windows שמאפשר למכונות אחרות להגיע לפורט ה־API <b>רק מכתובות של Tailscale</b> (100.64.0.0/10 ו־fd7a:115c:a1e0::/48) - לא מהרשת המקומית ולא מהאינטרנט. מכונה בודדת לא פותחת כלום. ההסרה מוחקת את הכלל.</li><li><b>Windows:</b> Tailscale שהותקן אחרי llm-api מזוהה מיד, בלי להפעיל מחדש את המחשב.</li></ul></div>
+  <div lang="en" dir="ltr"><ul><li><b>Windows, fleets:</b> when this machine starts a fleet (on the welcome screen) or joins one, the setup adds a Windows Firewall rule that lets other machines reach the API port <b>only from Tailscale addresses</b> (100.64.0.0/10 and fd7a:115c:a1e0::/48) - nothing from the local network or the internet. A single machine opens nothing. The uninstaller removes the rule.</li><li><b>Windows:</b> Tailscale installed after llm-api is found right away, without restarting the computer.</li></ul></div>
 </section>
 
 <footer>
-  llm-api 4.11.0 · <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases"><span lang="he">כל הגרסאות</span><span lang="en">All releases</span></a> ·
+  llm-api 4.11.1 · <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases"><span lang="he">כל הגרסאות</span><span lang="en">All releases</span></a> ·
   <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/blob/main/NOTICE.md"><span lang="he">תנאים ורישיונות</span><span lang="en">Terms and licenses</span></a>
 </footer>
 </div>
 <script>
 (function () {
-  var D = {"exe": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe", "curl": "curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh"};
+  var D = {"exe": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-setup-4.11.1.exe", "curl": "curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh"};
   var root = document.documentElement;
   function setLang(l) { root.setAttribute("data-lang", l); root.lang = l; root.dir = l === "he" ? "rtl" : "ltr";
     try { localStorage.setItem("lang", l); } catch (e) {} }
