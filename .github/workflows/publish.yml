@@ -1,0 +1,41 @@
+name: publish
+
+# The private build pushes three things over its deploy key, in one push:
+# the download page on main, the release files on the branch "incoming"
+# (one orphan commit, never part of main's history), and the version tag.
+# This turns the tag into a GitHub Release with those files - after their
+# SHA-256 is checked against SHA256SUMS - and deletes "incoming" again.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Fetch the release files
+        run: |
+          git clone --quiet --depth 1 --branch incoming \
+            "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" incoming
+          cd incoming && sha256sum -c SHA256SUMS
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          cd incoming
+          prerelease=""
+          case "$TAG" in *-*) prerelease="--prerelease" ;; esac
+          gh release create "$TAG" --repo "${{ github.repository }}" \
+            --title "llm-api ${TAG#v}" --notes-file NOTES.md $prerelease \
+            $(ls | grep -v -e '^NOTES.md$')
+
+      - name: Remove the hand-over branch
+        run: |
+          cd incoming
+          git push --quiet origin --delete incoming
