@@ -1,6 +1,151 @@
 <!doctype html>
-<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>llm-api - הורדה</title></head>
-<body style="font-family:system-ui;max-width:640px;margin:40px auto;padding:0 16px">
-<h1>llm-api</h1><p>הגרסה הציבורית הראשונה תעלה כאן בקרוב.</p><p dir="ltr">The first public release will appear here shortly.</p>
-</body></html>
+<html lang="he" dir="rtl" data-lang="he">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>llm-api - הורדה / Download</title>
+<meta name="description" content="llm-api 4.11.0: run AI models on your own computer. Windows, Linux and Raspberry Pi installers.">
+<style>
+:root{--bg:#f7f7f5;--panel:#fff;--ink:#16181d;--ink-2:#5b616e;--line:#e3e4e8;--accent:#2f6fde;--accent-ink:#fff;
+--code:#f0f1f4;--warn:#8a5a00;--warn-bg:#fff6e0}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1115;--panel:#171a21;--ink:#e8eaf0;--ink-2:#a0a6b4;
+--line:#2a2f3a;--accent:#5b8ff0;--accent-ink:#0b0d12;--code:#1f232c;--warn:#f0c060;--warn-bg:#2a2210}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+html[data-lang=he] [lang=en],html[data-lang=en] [lang=he]{display:none}
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+.brand svg{width:32px;height:32px}
+.lang{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer}
+.hero{margin:40px 0 28px;text-align:center}
+.hero h1{font-size:clamp(26px,5vw,38px);line-height:1.2;margin:0 0 10px}
+.hero p{color:var(--ink-2);margin:0 auto;max-width:600px}
+.cta{margin:28px auto 6px;max-width:520px}
+.big{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:18px 20px;border-radius:14px;
+background:var(--accent);color:var(--accent-ink);text-decoration:none;font-size:20px;font-weight:700}
+.big:hover{filter:brightness(1.05)}
+.big small{display:block;font-size:13px;font-weight:500;opacity:.85}
+.meta{color:var(--ink-2);font-size:13px;text-align:center;margin-top:8px}
+.cmd{display:flex;gap:8px;align-items:stretch;margin:8px 0}
+.cmd code{flex:1;min-width:0;overflow-x:auto;white-space:nowrap;padding:12px 14px;border-radius:10px;background:var(--code);
+font:14px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;direction:ltr;text-align:left}
+.copy{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:0 14px;font:inherit;cursor:pointer}
+section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}
+section h2{margin:0 0 12px;font-size:20px}
+.plat{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.card{border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h3{margin:0 0 6px;font-size:16px}.card p{margin:0 0 10px;color:var(--ink-2);font-size:14px}
+.card a{color:var(--accent);font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:13px}
+td,th{padding:8px 6px;border-top:1px solid var(--line);text-align:start;vertical-align:top}
+td.h{font-family:ui-monospace,Menlo,Consolas,monospace;direction:ltr;text-align:left;word-break:break-all}
+.warnbox{background:var(--warn-bg);color:var(--ink);border-radius:12px;padding:14px;margin:12px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:12px}
+figure{margin:0}figure img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
+figcaption{font-size:14px;color:var(--ink-2);margin-top:6px}
+.shots{display:grid;grid-template-columns:2fr 1fr;gap:14px;align-items:start}
+@media (max-width:640px){.shots{grid-template-columns:1fr}}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92em}
+footer{color:var(--ink-2);font-size:13px;text-align:center;margin-top:28px}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--accent)"/><path d="M9 10h3v9h6v3H9zM20 10h3v12h-3z" fill="var(--accent-ink)"/></svg><span>llm-api</span></div>
+  <button class="lang" id="lang" type="button"><span lang="he">English</span><span lang="en">עברית</span></button>
+</header>
+
+<div class="hero">
+  <h1><span lang="he">בינה מלאכותית על המחשב שלכם</span><span lang="en">AI models on your own computer</span></h1>
+  <p><span lang="he">מריצים מודלים מקומית, משתמשים בהם מכל מכשיר עם API תואם OpenAI, ומנהלים הכול מקונסולה בעברית.</span><span lang="en">Run models locally, use them from any device with an OpenAI-compatible API, and manage it all from a console in Hebrew or English.</span></p>
+  <div class="cta" id="cta">
+    <div data-os="windows">
+      <a class="big" href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe"><span lang="he">הורדה ל־Windows</span><span lang="en">Download for Windows</span><small>4.11.0 · 29.4 MB</small></a>
+      <div class="meta"><span lang="he">Windows 10 ו־11, 64 ביט. אין צורך להתקין שום דבר קודם.</span><span lang="en">Windows 10 and 11, 64-bit. Nothing to install first.</span></div>
+    </div>
+    <div data-os="linux" hidden>
+      <div class="meta" style="margin-bottom:6px"><span lang="he">לינוקס ו־Raspberry Pi (64 ביט) - מדביקים בטרמינל:</span><span lang="en">Linux and Raspberry Pi (64-bit) - paste in a terminal:</span></div>
+      <div class="cmd"><code id="curl">curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh</code><button class="copy" data-copy="curl" type="button"><span lang="he">העתקה</span><span lang="en">Copy</span></button></div>
+      <div class="meta"><span lang="he">הסקריפט בודק את ה־SHA-256 של ההורדה לפני ההתקנה.</span><span lang="en">The script checks the download's SHA-256 before it installs anything.</span></div>
+    </div>
+    <div data-os="mac" hidden>
+      <div class="warnbox"><span lang="he">עדיין אין גרסה ל־Mac. אפשר להתקין על מחשב Windows או לינוקס ולהשתמש בה מה־Mac דרך הדפדפן.</span><span lang="en">There is no Mac version yet. Install it on a Windows or Linux computer and use it from your Mac in the browser.</span></div>
+    </div>
+    <div data-os="phone" hidden>
+      <div class="warnbox"><span lang="he">מתקינים על מחשב (Windows, לינוקס או Raspberry Pi), ואחר כך משתמשים בו גם מהטלפון. פתחו את הדף הזה במחשב.</span><span lang="en">Install it on a computer (Windows, Linux or a Raspberry Pi), then use it from your phone too. Open this page on the computer.</span></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <h2><span lang="he">כל הפלטפורמות</span><span lang="en">Every platform</span></h2>
+  <div class="plat">
+    <div class="card"><h3>Windows 10 / 11</h3><p><span lang="he">קובץ התקנה אחד, כולל פייתון. מתקין גם את Ollama מ־ollama.com.</span><span lang="en">One setup file, Python included. Also installs Ollama from ollama.com.</span></p>
+      <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe">llm-api-setup-4.11.0.exe</a> <small>(29.4 MB)</small></div>
+    <div class="card"><h3><span lang="he">לינוקס / Raspberry Pi</span><span lang="en">Linux / Raspberry Pi</span></h3><p><span lang="he"><bdi dir="ltr">Ubuntu 22.04, 24.04, Debian 12, Raspberry Pi OS</bdi> (64 ביט).</span><span lang="en">Ubuntu 22.04 and 24.04, Debian 12, Raspberry Pi OS (64-bit).</span></p>
+      <div class="cmd"><code id="curl2">curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh</code><button class="copy" data-copy="curl2" type="button"><span lang="he">העתקה</span><span lang="en">Copy</span></button></div></div>
+    <div class="card"><h3>Mac</h3><p><span lang="he">עדיין לא. בינתיים: מתקינים על מחשב אחר ומשתמשים מה־Mac בדפדפן.</span><span lang="en">Not yet. Meanwhile: install on another computer and use it from your Mac in the browser.</span></p></div>
+  </div>
+</section>
+
+<section id="smartscreen">
+  <h2><span lang="he">Windows אומר ״Windows הגן על המחשב שלך״?</span><span lang="en">Windows says “Windows protected your PC”?</span></h2>
+  <p><span lang="he">קובץ ההתקנה עדיין לא חתום דיגיטלית, ולכן Windows SmartScreen מציג אזהרה על ״מפרסם לא ידוע״ בהפעלה הראשונה. זה צפוי. לפני שממשיכים כדאי לוודא שה־SHA-256 של הקובץ שהורדתם זהה לזה שבטבלה למטה.</span><span lang="en">The setup is not code-signed yet, so Windows SmartScreen shows an “unknown publisher” warning the first time it runs. That is expected. Before you continue, you can check that the file's SHA-256 matches the table below.</span></p>
+  <div class="steps"><figure><img src="img/smartscreen-1.png" alt="" loading="lazy"><figcaption><span lang="he">1. לוחצים על <b>מידע נוסף</b></span><span lang="en">1. Click <b>More info</b></span></figcaption></figure><figure><img src="img/smartscreen-2.png" alt="" loading="lazy"><figcaption><span lang="he">2. לוחצים על <b>הפעל בכל זאת</b></span><span lang="en">2. Click <b>Run anyway</b></span></figcaption></figure></div><p><small><span lang="he">איור להמחשה של חלון Windows (המראה המדויק משתנה בין גרסאות).</span><span lang="en">An illustration of the Windows dialog (the exact look varies between versions).</span></small></p>
+  <p><span lang="he">בדיקת ה־SHA-256 ב־PowerShell:</span><span lang="en">Checking the SHA-256 in PowerShell:</span></p>
+  <div class="cmd"><code>Get-FileHash .\llm-api-setup-4.11.0.exe</code></div>
+</section>
+
+<section><h2><span lang="he">מסך הפתיחה</span><span lang="en">The welcome screen</span></h2><p><span lang="he">בכניסה הראשונה לקונסולה: בוחרים סיסמה, מכונה אחת או צי, ומודל ראשון שמתאים לכרטיס המסך.</span><span lang="en">The first time you open the console: choose a password, a single machine or a fleet, and a first model that fits your graphics card.</span></p><div class="shots"><figure><img src="img/welcome-desktop.png" alt="" loading="lazy"><figcaption><span lang="he">במחשב</span><span lang="en">On a desktop</span></figcaption></figure><figure><img src="img/welcome-phone.png" alt="" loading="lazy"><figcaption><span lang="he">בטלפון</span><span lang="en">On a phone</span></figcaption></figure></div></section>
+
+<section>
+  <h2><span lang="he">קבצים ו־SHA-256</span><span lang="en">Files and SHA-256</span></h2>
+  <table><thead><tr><th><span lang="he">קובץ</span><span lang="en">File</span></th><th>SHA-256</th></tr></thead><tbody><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe">llm-api-setup-4.11.0.exe</a><br><small>29.4 MB</small></td><td class="h">901c5805e0cb2e5acc6f9401c253f71ddb8fead8c662a7c45eb299ac190df06e</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-4.11.0.tar.gz">llm-api-4.11.0.tar.gz</a><br><small>350 KB</small></td><td class="h">63ecf2662e006e7037cb6902c5aa2ba19d3cd20d0009fddf405204025492b0a7</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-4.11.0.zip">llm-api-4.11.0.zip</a><br><small>372 KB</small></td><td class="h">9a32a2a6a18307a0cb6d089806bc760ca155cb133cd39efb7ae90e881d6eacfe</td></tr></tbody></table>
+  <p><small><span lang="he">הקובץ zip הוא אותה תוכנה בלי מתקין (לעדכון ידני). רשימה מלאה:</span><span lang="en">The zip is the same program without an installer (for manual updates). Full list:</span>
+  <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/SHA256SUMS" dir="ltr">SHA256SUMS</a></small></p>
+</section>
+
+<section>
+  <h2><span lang="he">מה חדש</span><span lang="en">What's new</span> · 4.11.0 <small style="font-weight:400;color:var(--ink-2)">(2026-10-24)</small></h2>
+  <div lang="he"><p>הגרסה הציבורית הראשונה.</p>
+<ul><li><b>התקנה ל־Windows</b> (קובץ exe אחד, בלי להתקין שום דבר קודם): פייתון וחבילות משלה, Ollama מהאתר ollama.com, שני שירותים שעולים עם המחשב, והסרה דרך הגדרות &gt; אפליקציות.</li><li><b>לינוקס ו־Raspberry Pi</b>: פקודה אחת, <code dir="ltr">curl -fsSL .../install.sh | sh</code>; ההורדה נבדקת מול ה־SHA-256 שלה לפני שמשהו מותקן.</li><li><b>מסך פתיחה</b> בכניסה הראשונה, בעברית או באנגלית, בטלפון או במחשב: בוחרים סיסמה לקונסולה (רק במכונה עצמה), מכונה אחת או צי, ומודל ראשון שמתאים לכרטיס המסך, עם התקדמות ההורדה.</li><li><b>עדכונים</b>: הקונסולה מודיעה כשיוצאת גרסה חדשה ומתקינה אותה בלחיצה אחת (נבדקת מול ה־SHA-256 שלה, עם חזרה אוטומטית לגרסה הקודמת אם משהו נכשל).</li><li>כל מה שהיה בגרסאות הפרטיות שלפניה: API תואם OpenAI, קונסולה עם צ'אט, מכונות, מודלים, מפתחות ותעבורה; מצב עברית עם שמירה מפני תשובות בכתב הלא נכון; מגבלות וסטטיסטיקה לכל מפתח; כמה מכונות כצי אחד עם מעבר אוטומטי כשמכונה נופלת.</li></ul></div>
+  <div lang="en" dir="ltr"><p>The first public release.</p>
+<ul><li><b>Windows setup</b> (one .exe, nothing to install first): its own Python and packages, Ollama from ollama.com, two services that start with the computer, and an uninstaller in Settings &gt; Apps.</li><li><b>Linux and Raspberry Pi</b>: one command, <code dir="ltr">curl -fsSL .../install.sh | sh</code>; the download is checked against its SHA-256 before anything is installed.</li><li><b>Welcome screen</b> on the first visit, in Hebrew or English, on a phone or a desktop: choose the console password (only on the machine itself), a single machine or a fleet, and a first model sized to your graphics card, with download progress.</li><li><b>Updates</b>: the console tells you when a new version is out and installs it with one click (checked against its SHA-256, with automatic rollback).</li><li>Everything from the private versions before it: an OpenAI-compatible API, a console with chat, machines, models, keys and traffic; Hebrew mode with a guard against answers in the wrong script; per-key limits and statistics; several machines as one fleet with automatic failover.</li></ul></div>
+</section>
+
+<footer>
+  llm-api 4.11.0 · <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases"><span lang="he">כל הגרסאות</span><span lang="en">All releases</span></a> ·
+  <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/blob/main/NOTICE.md"><span lang="he">תנאים ורישיונות</span><span lang="en">Terms and licenses</span></a>
+</footer>
+</div>
+<script>
+(function () {
+  var D = {"exe": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.0/llm-api-setup-4.11.0.exe", "curl": "curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh"};
+  var root = document.documentElement;
+  function setLang(l) { root.setAttribute("data-lang", l); root.lang = l; root.dir = l === "he" ? "rtl" : "ltr";
+    try { localStorage.setItem("lang", l); } catch (e) {} }
+  var saved = null; try { saved = localStorage.getItem("lang"); } catch (e) {}
+  var nav = (navigator.languages || [navigator.language || ""]).join(",").toLowerCase();
+  setLang(saved || (nav.indexOf("he") === 0 || nav.indexOf(",he") >= 0 || /(^|,)iw/.test(nav) ? "he" : (nav ? "en" : "he")));
+  document.getElementById("lang").onclick = function () { setLang(root.getAttribute("data-lang") === "he" ? "en" : "he"); };
+  var ua = navigator.userAgent || "", plat = ((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "");
+  var os = /Android|iPhone|iPad|iPod/i.test(ua) || (/Mac/.test(plat) && navigator.maxTouchPoints > 1) ? "phone"
+    : /Win/i.test(plat + ua) ? "windows" : /Mac/i.test(plat + ua) ? "mac" : /Linux|X11|CrOS/i.test(plat + ua) ? "linux" : "windows";
+  var boxes = document.querySelectorAll("[data-os]");
+  for (var i = 0; i < boxes.length; i++) { boxes[i].hidden = boxes[i].getAttribute("data-os") !== os; }
+  root.setAttribute("data-os", os);
+  var btns = document.querySelectorAll("[data-copy]");
+  for (var j = 0; j < btns.length; j++) {
+    btns[j].onclick = function () {
+      var b = this, text = document.getElementById(b.getAttribute("data-copy")).textContent;
+      var done = function () { var old = b.innerHTML; b.textContent = "✓"; setTimeout(function () { b.innerHTML = old; }, 1500); };
+      if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done, function () {}); }
+    };
+  }
+})();
+</script>
+</body>
+</html>
