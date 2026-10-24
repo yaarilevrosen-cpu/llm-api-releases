@@ -1,28 +1,28 @@
 {
-  "version": "4.11.1",
-  "tag": "v4.11.1",
+  "version": "4.12.0",
+  "tag": "v4.12.0",
   "released": "2026-10-24",
   "page": "https://yaarilevrosen-cpu.github.io/llm-api-releases/",
-  "notes_en": "- **Windows, fleets:** when this machine starts a fleet (on the welcome screen)\n  or joins one, the setup adds a Windows Firewall rule that lets other\n  machines reach the API port **only from Tailscale addresses**\n  (100.64.0.0/10 and fd7a:115c:a1e0::/48) - nothing from the local network or\n  the internet. A single machine opens nothing. The uninstaller removes the rule.\n- **Windows:** Tailscale installed after llm-api is found right away, without\n  restarting the computer.",
-  "notes_he": "- **Windows, צי:** כשהמכונה מתחילה צי (במסך הפתיחה) או מצטרפת לצי, ההתקנה מוסיפה\n  כלל בחומת האש של Windows שמאפשר למכונות אחרות להגיע לפורט ה־API **רק מכתובות\n  של Tailscale** (100.64.0.0/10 ו־fd7a:115c:a1e0::/48) - לא מהרשת המקומית ולא\n  מהאינטרנט. מכונה בודדת לא פותחת כלום. ההסרה מוחקת את הכלל.\n- **Windows:** Tailscale שהותקן אחרי llm-api מזוהה מיד, בלי להפעיל מחדש את המחשב.",
+  "notes_en": "- **See where each model runs:** for every loaded model on every machine, how much\n  is in GPU memory and how much in system RAM (that part runs on the CPU), with\n  free and total GPU memory and the context it was loaded with - in Models, on\n  the Fleet cards, and under a chat answer when the model was not fully on the GPU.\n- **Choose, per model and machine:** Auto (as before), GPU only (never partly on\n  the CPU: the machine refuses and another machine or the cloud answers), or a\n  number of layers on the GPU; and a default context, with a warning when it\n  would not fit.\n- **Routing prefers a model that fits fully on a GPU;** \"fast\" never picks a split\n  model when a fully-GPU one is available. The reason says \"fits on GPU\" or\n  \"split 30% CPU\".\n- **Speed test per model and machine** at its current setting.\n- API: `options` in `/v1/chat/completions` passes Ollama options (num_ctx,\n  num_gpu, seed, ...); a client's own options always win.",
+  "notes_he": "- **רואים איפה כל מודל רץ:** לכל מודל טעון בכל מכונה - כמה ממנו בזיכרון של כרטיס\n  המסך וכמה בזיכרון המחשב (החלק הזה רץ על המעבד), עם הזיכרון הפנוי והכולל של\n  הכרטיס וההקשר שבו נטען - במודלים, בכרטיסי הצי, ומתחת לתשובה בצ'אט כשהמודל לא היה\n  כולו בכרטיס.\n- **בוחרים, לכל מודל ומכונה:** אוטומטי (כמו קודם), רק כרטיס מסך (אף פעם לא חלקית\n  על המעבד: המכונה מסרבת ומכונה אחרת או הענן עונים), או מספר שכבות בכרטיס; וגם\n  הקשר ברירת מחדל, עם אזהרה כשהוא לא ייכנס.\n- **הניתוב מעדיף מודל שנכנס כולו לכרטיס;** מצב \"מהיר\" לא בוחר מודל מפוצל כשיש\n  אפשרות שכולה בכרטיס. הסיבה נכתבת: \"fits on GPU\" או \"split 30% CPU\".\n- **בדיקת מהירות לכל מודל ומכונה** בהגדרה הנוכחית.",
   "files": {
     "exe": {
-      "name": "llm-api-setup-4.11.1.exe",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-setup-4.11.1.exe",
-      "sha256": "d13c4bdd96da3b87894f389c88d1586901a4aa2610a05501e53a24f38d214c6c",
-      "size": 29364638
+      "name": "llm-api-setup-4.12.0.exe",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-setup-4.12.0.exe",
+      "sha256": "bbe033a5abd618f240368fdb2f8d4d119dac265f59487fb7daebe7af96237094",
+      "size": 29374432
     },
     "tar": {
-      "name": "llm-api-4.11.1.tar.gz",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-4.11.1.tar.gz",
-      "sha256": "b29aa2e3847be4e90a3c7cbf74cd37e188a2a153c46992ec6e7c1f977f62eee7",
-      "size": 352060
+      "name": "llm-api-4.12.0.tar.gz",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-4.12.0.tar.gz",
+      "sha256": "b221324f6588bbca23f792c002cda1a4493dabdb82351984b2299baa2a7cada3",
+      "size": 366285
     },
     "zip": {
-      "name": "llm-api-4.11.1.zip",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.11.1/llm-api-4.11.1.zip",
-      "sha256": "78a9194f979e76d311cc28d776e66fced206ddd9ee863bb5645ff4054c11d278",
-      "size": 374038
+      "name": "llm-api-4.12.0.zip",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-4.12.0.zip",
+      "sha256": "8e17ffaaa85bf43735a90594db2559e16b93a3d3a30cc9313729be50fb749a34",
+      "size": 389271
     }
   }
 }
