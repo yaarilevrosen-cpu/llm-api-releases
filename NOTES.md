@@ -1,34 +1,32 @@
-**llm-api 4.12.0** - 2026-10-24
+**llm-api 4.13.0** - 2026-10-27
 
-- **See where each model runs:** for every loaded model on every machine, how much
-  is in GPU memory and how much in system RAM (that part runs on the CPU), with
-  free and total GPU memory and the context it was loaded with - in Models, on
-  the Fleet cards, and under a chat answer when the model was not fully on the GPU.
-- **Choose, per model and machine:** Auto (as before), GPU only (never partly on
-  the CPU: the machine refuses and another machine or the cloud answers), or a
-  number of layers on the GPU; and a default context, with a warning when it
-  would not fit.
-- **Routing prefers a model that fits fully on a GPU;** "fast" never picks a split
-  model when a fully-GPU one is available. The reason says "fits on GPU" or
-  "split 30% CPU".
-- **Speed test per model and machine** at its current setting.
-- API: `options` in `/v1/chat/completions` passes Ollama options (num_ctx,
-  num_gpu, seed, ...); a client's own options always win.
+- **Machines without a graphics card:** detected automatically. The welcome
+  screen and "Add machine" offer three choices with an honest speed note -
+  router only, a small local model plus cloud providers, or a small local model
+  only - and the model is picked to fit the RAM. Such a machine answers only
+  when nothing better can ("CPU only"), and the doctor says so plainly.
+- **Long conversations:** a conversation longer than the model's context no
+  longer loses its beginning silently. The context is raised for that request
+  as far as the model stays on the GPU, the machine that can hold the whole
+  conversation is preferred, and only when nothing can hold it is the older
+  part summarised - shown in the chat as "part of the start was summarised",
+  with the summary one tap away. API clients get `X-Context-Summarized: 1`; a key
+  can be set to refuse instead (`E_CONTEXT_TOO_LONG`).
+- `install.sh --model X` now downloads that model on a fresh install.
 
 ---
 
 <div dir="rtl">
 
-- **רואים איפה כל מודל רץ:** לכל מודל טעון בכל מכונה - כמה ממנו בזיכרון של כרטיס
-  המסך וכמה בזיכרון המחשב (החלק הזה רץ על המעבד), עם הזיכרון הפנוי והכולל של
-  הכרטיס וההקשר שבו נטען - במודלים, בכרטיסי הצי, ומתחת לתשובה בצ'אט כשהמודל לא היה
-  כולו בכרטיס.
-- **בוחרים, לכל מודל ומכונה:** אוטומטי (כמו קודם), רק כרטיס מסך (אף פעם לא חלקית
-  על המעבד: המכונה מסרבת ומכונה אחרת או הענן עונים), או מספר שכבות בכרטיס; וגם
-  הקשר ברירת מחדל, עם אזהרה כשהוא לא ייכנס.
-- **הניתוב מעדיף מודל שנכנס כולו לכרטיס;** מצב "מהיר" לא בוחר מודל מפוצל כשיש
-  אפשרות שכולה בכרטיס. הסיבה נכתבת: "fits on GPU" או "split 30% CPU".
-- **בדיקת מהירות לכל מודל ומכונה** בהגדרה הנוכחית.
+- **מכונות בלי כרטיס מסך:** מזוהות אוטומטית. מסך הפתיחה ו"הוספת מכונה" מציעים שלוש
+  אפשרויות עם הערכת מהירות כנה - נתב בלבד, מודל קטן מקומי + ספקי ענן, או רק מודל קטן
+  מקומי - והמודל נבחר לפי הזיכרון. מכונה כזאת עונה רק כשאין מי שיענה טוב יותר
+  ("CPU only"), והבדיקה העצמית אומרת זאת בבירור.
+- **שיחות ארוכות:** שיחה ארוכה מההקשר של המודל כבר לא מאבדת את תחילתה בשקט. ההקשר
+  מוגדל לבקשה הזאת ככל שהמודל עדיין נשאר בכרטיס, המכונה שיכולה להחזיק את כל השיחה
+  מועדפת, ורק כשאף מכונה לא יכולה - החלק הקודם מסוכם, ובצ'אט מופיע "חלק מתחילת השיחה
+  סוכם" עם הסיכום בלחיצה.
+- `install.sh --model X` מוריד עכשיו את המודל הזה בהתקנה חדשה.
 
 </div>
 

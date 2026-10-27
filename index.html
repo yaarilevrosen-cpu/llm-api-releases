@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>llm-api - הורדה / Download</title>
-<meta name="description" content="llm-api 4.12.0: run AI models on your own computer. Windows, Linux and Raspberry Pi installers.">
+<meta name="description" content="llm-api 4.13.0: run AI models on your own computer. Windows, Linux and Raspberry Pi installers.">
 <style>
 :root{--bg:#f7f7f5;--panel:#fff;--ink:#16181d;--ink-2:#5b616e;--line:#e3e4e8;--accent:#2f6fde;--accent-ink:#fff;
 --code:#f0f1f4;--warn:#8a5a00;--warn-bg:#fff6e0}
@@ -63,7 +63,7 @@ footer a{color:inherit}
   <p><span lang="he">מריצים מודלים מקומית, משתמשים בהם מכל מכשיר עם API תואם OpenAI, ומנהלים הכול מקונסולה בעברית.</span><span lang="en">Run models locally, use them from any device with an OpenAI-compatible API, and manage it all from a console in Hebrew or English.</span></p>
   <div class="cta" id="cta">
     <div data-os="windows">
-      <a class="big" href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-setup-4.12.0.exe"><span lang="he">הורדה ל־Windows</span><span lang="en">Download for Windows</span><small>4.12.0 · 29.4 MB</small></a>
+      <a class="big" href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-setup-4.13.0.exe"><span lang="he">הורדה ל־Windows</span><span lang="en">Download for Windows</span><small>4.13.0 · 29.4 MB</small></a>
       <div class="meta"><span lang="he">Windows 10 ו־11, 64 ביט. אין צורך להתקין שום דבר קודם.</span><span lang="en">Windows 10 and 11, 64-bit. Nothing to install first.</span></div>
     </div>
     <div data-os="linux" hidden>
@@ -84,7 +84,7 @@ footer a{color:inherit}
   <h2><span lang="he">כל הפלטפורמות</span><span lang="en">Every platform</span></h2>
   <div class="plat">
     <div class="card"><h3>Windows 10 / 11</h3><p><span lang="he">קובץ התקנה אחד, כולל פייתון. מתקין גם את Ollama מ־ollama.com.</span><span lang="en">One setup file, Python included. Also installs Ollama from ollama.com.</span></p>
-      <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-setup-4.12.0.exe">llm-api-setup-4.12.0.exe</a> <small>(29.4 MB)</small></div>
+      <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-setup-4.13.0.exe">llm-api-setup-4.13.0.exe</a> <small>(29.4 MB)</small></div>
     <div class="card"><h3><span lang="he">לינוקס / Raspberry Pi</span><span lang="en">Linux / Raspberry Pi</span></h3><p><span lang="he"><bdi dir="ltr">Ubuntu 22.04, 24.04, Debian 12, Raspberry Pi OS</bdi> (64 ביט).</span><span lang="en">Ubuntu 22.04 and 24.04, Debian 12, Raspberry Pi OS (64-bit).</span></p>
       <div class="cmd"><code id="curl2">curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh</code><button class="copy" data-copy="curl2" type="button"><span lang="he">העתקה</span><span lang="en">Copy</span></button></div></div>
     <div class="card"><h3>Mac</h3><p><span lang="he">עדיין לא. בינתיים: מתקינים על מחשב אחר ומשתמשים מה־Mac בדפדפן.</span><span lang="en">Not yet. Meanwhile: install on another computer and use it from your Mac in the browser.</span></p></div>
@@ -96,32 +96,32 @@ footer a{color:inherit}
   <p><span lang="he">קובץ ההתקנה עדיין לא חתום דיגיטלית, ולכן Windows SmartScreen מציג אזהרה על ״מפרסם לא ידוע״ בהפעלה הראשונה. זה צפוי. לפני שממשיכים כדאי לוודא שה־SHA-256 של הקובץ שהורדתם זהה לזה שבטבלה למטה.</span><span lang="en">The setup is not code-signed yet, so Windows SmartScreen shows an “unknown publisher” warning the first time it runs. That is expected. Before you continue, you can check that the file's SHA-256 matches the table below.</span></p>
   <div class="steps"><figure><img src="img/smartscreen-1.png" alt="" loading="lazy"><figcaption><span lang="he">1. לוחצים על <b>מידע נוסף</b></span><span lang="en">1. Click <b>More info</b></span></figcaption></figure><figure><img src="img/smartscreen-2.png" alt="" loading="lazy"><figcaption><span lang="he">2. לוחצים על <b>הפעל בכל זאת</b></span><span lang="en">2. Click <b>Run anyway</b></span></figcaption></figure></div><p><small><span lang="he">איור להמחשה של חלון Windows (המראה המדויק משתנה בין גרסאות).</span><span lang="en">An illustration of the Windows dialog (the exact look varies between versions).</span></small></p>
   <p><span lang="he">בדיקת ה־SHA-256 ב־PowerShell:</span><span lang="en">Checking the SHA-256 in PowerShell:</span></p>
-  <div class="cmd"><code>Get-FileHash .\llm-api-setup-4.12.0.exe</code></div>
+  <div class="cmd"><code>Get-FileHash .\llm-api-setup-4.13.0.exe</code></div>
 </section>
 
 <section><h2><span lang="he">מסך הפתיחה</span><span lang="en">The welcome screen</span></h2><p><span lang="he">בכניסה הראשונה לקונסולה: בוחרים סיסמה, מכונה אחת או צי, ומודל ראשון שמתאים לכרטיס המסך.</span><span lang="en">The first time you open the console: choose a password, a single machine or a fleet, and a first model that fits your graphics card.</span></p><div class="shots"><figure><img src="img/welcome-desktop.png" alt="" loading="lazy"><figcaption><span lang="he">במחשב</span><span lang="en">On a desktop</span></figcaption></figure><figure><img src="img/welcome-phone.png" alt="" loading="lazy"><figcaption><span lang="he">בטלפון</span><span lang="en">On a phone</span></figcaption></figure></div></section>
 
 <section>
   <h2><span lang="he">קבצים ו־SHA-256</span><span lang="en">Files and SHA-256</span></h2>
-  <table><thead><tr><th><span lang="he">קובץ</span><span lang="en">File</span></th><th>SHA-256</th></tr></thead><tbody><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-setup-4.12.0.exe">llm-api-setup-4.12.0.exe</a><br><small>29.4 MB</small></td><td class="h">bbe033a5abd618f240368fdb2f8d4d119dac265f59487fb7daebe7af96237094</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-4.12.0.tar.gz">llm-api-4.12.0.tar.gz</a><br><small>366 KB</small></td><td class="h">b221324f6588bbca23f792c002cda1a4493dabdb82351984b2299baa2a7cada3</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-4.12.0.zip">llm-api-4.12.0.zip</a><br><small>389 KB</small></td><td class="h">8e17ffaaa85bf43735a90594db2559e16b93a3d3a30cc9313729be50fb749a34</td></tr></tbody></table>
+  <table><thead><tr><th><span lang="he">קובץ</span><span lang="en">File</span></th><th>SHA-256</th></tr></thead><tbody><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-setup-4.13.0.exe">llm-api-setup-4.13.0.exe</a><br><small>29.4 MB</small></td><td class="h">9cd07d46e009445ea05f6c7554dfe9aa6b0710df76d12e54b6de3d6af968d05b</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-4.13.0.tar.gz">llm-api-4.13.0.tar.gz</a><br><small>380 KB</small></td><td class="h">9c2f56807acb842d2ea0ff678a323049831c1855f0c1aac9633505861c2c5a93</td></tr><tr><td><a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-4.13.0.zip">llm-api-4.13.0.zip</a><br><small>404 KB</small></td><td class="h">8d4114bc2c266d23fcf46f989eb8394d7ed91b467f93e3f87970697e53cac12c</td></tr></tbody></table>
   <p><small><span lang="he">הקובץ zip הוא אותה תוכנה בלי מתקין (לעדכון ידני). רשימה מלאה:</span><span lang="en">The zip is the same program without an installer (for manual updates). Full list:</span>
-  <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/SHA256SUMS" dir="ltr">SHA256SUMS</a></small></p>
+  <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/SHA256SUMS" dir="ltr">SHA256SUMS</a></small></p>
 </section>
 
 <section>
-  <h2><span lang="he">מה חדש</span><span lang="en">What's new</span> · 4.12.0 <small style="font-weight:400;color:var(--ink-2)">(2026-10-24)</small></h2>
-  <div lang="he"><ul><li><b>רואים איפה כל מודל רץ:</b> לכל מודל טעון בכל מכונה - כמה ממנו בזיכרון של כרטיס המסך וכמה בזיכרון המחשב (החלק הזה רץ על המעבד), עם הזיכרון הפנוי והכולל של הכרטיס וההקשר שבו נטען - במודלים, בכרטיסי הצי, ומתחת לתשובה בצ'אט כשהמודל לא היה כולו בכרטיס.</li><li><b>בוחרים, לכל מודל ומכונה:</b> אוטומטי (כמו קודם), רק כרטיס מסך (אף פעם לא חלקית על המעבד: המכונה מסרבת ומכונה אחרת או הענן עונים), או מספר שכבות בכרטיס; וגם הקשר ברירת מחדל, עם אזהרה כשהוא לא ייכנס.</li><li><b>הניתוב מעדיף מודל שנכנס כולו לכרטיס;</b> מצב "מהיר" לא בוחר מודל מפוצל כשיש אפשרות שכולה בכרטיס. הסיבה נכתבת: "fits on GPU" או "split 30% CPU".</li><li><b>בדיקת מהירות לכל מודל ומכונה</b> בהגדרה הנוכחית.</li></ul></div>
-  <div lang="en" dir="ltr"><ul><li><b>See where each model runs:</b> for every loaded model on every machine, how much is in GPU memory and how much in system RAM (that part runs on the CPU), with free and total GPU memory and the context it was loaded with - in Models, on the Fleet cards, and under a chat answer when the model was not fully on the GPU.</li><li><b>Choose, per model and machine:</b> Auto (as before), GPU only (never partly on the CPU: the machine refuses and another machine or the cloud answers), or a number of layers on the GPU; and a default context, with a warning when it would not fit.</li><li><b>Routing prefers a model that fits fully on a GPU;</b> "fast" never picks a split model when a fully-GPU one is available. The reason says "fits on GPU" or "split 30% CPU".</li><li><b>Speed test per model and machine</b> at its current setting.</li><li>API: <code dir="ltr">options</code> in <code dir="ltr">/v1/chat/completions</code> passes Ollama options (num_ctx, num_gpu, seed, ...); a client's own options always win.</li></ul></div>
+  <h2><span lang="he">מה חדש</span><span lang="en">What's new</span> · 4.13.0 <small style="font-weight:400;color:var(--ink-2)">(2026-10-27)</small></h2>
+  <div lang="he"><ul><li><b>מכונות בלי כרטיס מסך:</b> מזוהות אוטומטית. מסך הפתיחה ו"הוספת מכונה" מציעים שלוש אפשרויות עם הערכת מהירות כנה - נתב בלבד, מודל קטן מקומי + ספקי ענן, או רק מודל קטן מקומי - והמודל נבחר לפי הזיכרון. מכונה כזאת עונה רק כשאין מי שיענה טוב יותר ("CPU only"), והבדיקה העצמית אומרת זאת בבירור.</li><li><b>שיחות ארוכות:</b> שיחה ארוכה מההקשר של המודל כבר לא מאבדת את תחילתה בשקט. ההקשר מוגדל לבקשה הזאת ככל שהמודל עדיין נשאר בכרטיס, המכונה שיכולה להחזיק את כל השיחה מועדפת, ורק כשאף מכונה לא יכולה - החלק הקודם מסוכם, ובצ'אט מופיע "חלק מתחילת השיחה סוכם" עם הסיכום בלחיצה.</li><li><code dir="ltr">install.sh --model X</code> מוריד עכשיו את המודל הזה בהתקנה חדשה.</li></ul></div>
+  <div lang="en" dir="ltr"><ul><li><b>Machines without a graphics card:</b> detected automatically. The welcome screen and "Add machine" offer three choices with an honest speed note - router only, a small local model plus cloud providers, or a small local model only - and the model is picked to fit the RAM. Such a machine answers only when nothing better can ("CPU only"), and the doctor says so plainly.</li><li><b>Long conversations:</b> a conversation longer than the model's context no longer loses its beginning silently. The context is raised for that request as far as the model stays on the GPU, the machine that can hold the whole conversation is preferred, and only when nothing can hold it is the older part summarised - shown in the chat as "part of the start was summarised", with the summary one tap away. API clients get <code dir="ltr">X-Context-Summarized: 1</code>; a key can be set to refuse instead (<code dir="ltr">E_CONTEXT_TOO_LONG</code>).</li><li><code dir="ltr">install.sh --model X</code> now downloads that model on a fresh install.</li></ul></div>
 </section>
 
 <footer>
-  llm-api 4.12.0 · <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases"><span lang="he">כל הגרסאות</span><span lang="en">All releases</span></a> ·
+  llm-api 4.13.0 · <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/releases"><span lang="he">כל הגרסאות</span><span lang="en">All releases</span></a> ·
   <a href="https://github.com/yaarilevrosen-cpu/llm-api-releases/blob/main/NOTICE.md"><span lang="he">תנאים ורישיונות</span><span lang="en">Terms and licenses</span></a>
 </footer>
 </div>
 <script>
 (function () {
-  var D = {"exe": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.12.0/llm-api-setup-4.12.0.exe", "curl": "curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh"};
+  var D = {"exe": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-setup-4.13.0.exe", "curl": "curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh"};
   var root = document.documentElement;
   function setLang(l) { root.setAttribute("data-lang", l); root.lang = l; root.dir = l === "he" ? "rtl" : "ltr";
     try { localStorage.setItem("lang", l); } catch (e) {} }
