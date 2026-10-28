@@ -1,28 +1,28 @@
 {
-  "version": "4.13.0",
-  "tag": "v4.13.0",
+  "version": "4.13.1",
+  "tag": "v4.13.1",
   "released": "2026-10-27",
   "page": "https://yaarilevrosen-cpu.github.io/llm-api-releases/",
-  "notes_en": "- **Machines without a graphics card:** detected automatically. The welcome\n  screen and \"Add machine\" offer three choices with an honest speed note -\n  router only, a small local model plus cloud providers, or a small local model\n  only - and the model is picked to fit the RAM. Such a machine answers only\n  when nothing better can (\"CPU only\"), and the doctor says so plainly.\n- **Long conversations:** a conversation longer than the model's context no\n  longer loses its beginning silently. The context is raised for that request\n  as far as the model stays on the GPU, the machine that can hold the whole\n  conversation is preferred, and only when nothing can hold it is the older\n  part summarised - shown in the chat as \"part of the start was summarised\",\n  with the summary one tap away. API clients get `X-Context-Summarized: 1`; a key\n  can be set to refuse instead (`E_CONTEXT_TOO_LONG`).\n- `install.sh --model X` now downloads that model on a fresh install.",
-  "notes_he": "- **מכונות בלי כרטיס מסך:** מזוהות אוטומטית. מסך הפתיחה ו\"הוספת מכונה\" מציעים שלוש\n  אפשרויות עם הערכת מהירות כנה - נתב בלבד, מודל קטן מקומי + ספקי ענן, או רק מודל קטן\n  מקומי - והמודל נבחר לפי הזיכרון. מכונה כזאת עונה רק כשאין מי שיענה טוב יותר\n  (\"CPU only\"), והבדיקה העצמית אומרת זאת בבירור.\n- **שיחות ארוכות:** שיחה ארוכה מההקשר של המודל כבר לא מאבדת את תחילתה בשקט. ההקשר\n  מוגדל לבקשה הזאת ככל שהמודל עדיין נשאר בכרטיס, המכונה שיכולה להחזיק את כל השיחה\n  מועדפת, ורק כשאף מכונה לא יכולה - החלק הקודם מסוכם, ובצ'אט מופיע \"חלק מתחילת השיחה\n  סוכם\" עם הסיכום בלחיצה.\n- `install.sh --model X` מוריד עכשיו את המודל הזה בהתקנה חדשה.",
+  "notes_en": "- **A slow machine no longer stalls itself:** every connection the program made\n  loaded the system's certificate list again, on the thread that answers all\n  requests. On a busy Windows laptop that took seconds, so even simple status\n  checks waited and the router sometimes skipped the machine. The list is now\n  loaded once. A stuck request loop is also logged, with where it was stuck.",
+  "notes_he": "- **מכונה איטית כבר לא עוצרת את עצמה:** כל חיבור שהתוכנה פתחה טען מחדש את רשימת\n  האישורים של המערכת, על התהליך שעונה לכל הבקשות. במחשב נייד Windows עמוס זה לקח\n  שניות, כך שגם בדיקות מצב פשוטות חיכו והנתב דילג לפעמים על המכונה. עכשיו הרשימה\n  נטענת פעם אחת. כשלולאת הבקשות נתקעת, זה נרשם ביומן יחד עם המקום שבו נתקעה.",
   "files": {
     "exe": {
-      "name": "llm-api-setup-4.13.0.exe",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-setup-4.13.0.exe",
-      "sha256": "9cd07d46e009445ea05f6c7554dfe9aa6b0710df76d12e54b6de3d6af968d05b",
-      "size": 29387881
+      "name": "llm-api-setup-4.13.1.exe",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.1/llm-api-setup-4.13.1.exe",
+      "sha256": "fb2c6b5269a36ba2b9b7cefce40f85a802c4e61f77a47e816f953e5cb15f5976",
+      "size": 29387773
     },
     "tar": {
-      "name": "llm-api-4.13.0.tar.gz",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-4.13.0.tar.gz",
-      "sha256": "9c2f56807acb842d2ea0ff678a323049831c1855f0c1aac9633505861c2c5a93",
-      "size": 380103
+      "name": "llm-api-4.13.1.tar.gz",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.1/llm-api-4.13.1.tar.gz",
+      "sha256": "64c74d53df12ed6ba22a3ea295147ad205166d58ecca937554b982b5d722921a",
+      "size": 381557
     },
     "zip": {
-      "name": "llm-api-4.13.0.zip",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.0/llm-api-4.13.0.zip",
-      "sha256": "8d4114bc2c266d23fcf46f989eb8394d7ed91b467f93e3f87970697e53cac12c",
-      "size": 403698
+      "name": "llm-api-4.13.1.zip",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.1/llm-api-4.13.1.zip",
+      "sha256": "5696e183eec58e4ccb3f46e8278c54c8448a7981a3ac0b8cb90a1ba1acab087c",
+      "size": 405575
     }
   }
 }
