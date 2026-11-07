@@ -1,5 +1,5 @@
 #!/bin/sh
-# llm-api 4.14.0 - install on Linux or a Raspberry Pi (64-bit).
+# llm-api 4.15.0 - install on Linux or a Raspberry Pi (64-bit).
 #
 #   curl -fsSL https://yaarilevrosen-cpu.github.io/llm-api-releases/install.sh | sh
 #
@@ -13,9 +13,9 @@
 # short can never run half a script.
 
 main() {
-    VERSION='4.14.0'
-    URL="${LLM_API_RELEASE_URL:-https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.14.0}/llm-api-4.14.0.tar.gz"
-    SHA256='6adbf182371ace102f58d82c01a3532d6730e98059f93de8e7801b1a00ea9b33'
+    VERSION='4.15.0'
+    URL="${LLM_API_RELEASE_URL:-https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.15.0}/llm-api-4.15.0.tar.gz"
+    SHA256='7c628cdf934e83723c6d025c664357e95c79518275e033a0913d1fe170430023'
     DIR="${LLM_API_DIR:-$HOME/llm-api}"
     PASS=""
     while [ $# -gt 0 ]; do
