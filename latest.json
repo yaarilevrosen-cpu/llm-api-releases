@@ -1,28 +1,28 @@
 {
-  "version": "4.13.1",
-  "tag": "v4.13.1",
-  "released": "2026-10-27",
+  "version": "4.14.0",
+  "tag": "v4.14.0",
+  "released": "2026-11-07",
   "page": "https://yaarilevrosen-cpu.github.io/llm-api-releases/",
-  "notes_en": "- **A slow machine no longer stalls itself:** every connection the program made\n  loaded the system's certificate list again, on the thread that answers all\n  requests. On a busy Windows laptop that took seconds, so even simple status\n  checks waited and the router sometimes skipped the machine. The list is now\n  loaded once. A stuck request loop is also logged, with where it was stuck.",
-  "notes_he": "- **מכונה איטית כבר לא עוצרת את עצמה:** כל חיבור שהתוכנה פתחה טען מחדש את רשימת\n  האישורים של המערכת, על התהליך שעונה לכל הבקשות. במחשב נייד Windows עמוס זה לקח\n  שניות, כך שגם בדיקות מצב פשוטות חיכו והנתב דילג לפעמים על המכונה. עכשיו הרשימה\n  נטענת פעם אחת. כשלולאת הבקשות נתקעת, זה נרשם ביומן יחד עם המקום שבו נתקעה.",
+  "notes_en": "- **Tool calls (OpenAI format), for Home Assistant and other agents:** a chat\n  request with `tools` now gets `tool_calls` back, in OpenAI's shape, streamed or\n  not, and the follow-up turn with the tool results gets the answer. Built for\n  Home Assistant's Extended OpenAI Conversation, so a spoken command can switch a\n  light on with nothing leaving your machines. The legacy `functions` format works\n  too.\n- Only models that can call tools are used (each machine reports them); asking\n  for one that cannot is a clear 400 that names the ones that can. A request with\n  tools never goes to a cloud provider, stays on one model and one machine for the\n  whole exchange, and is never summarised.",
+  "notes_he": "- **קריאה לכלים (בתבנית של OpenAI), בשביל Home Assistant ומערכות דומות:** בקשת צ'אט\n  עם רשימת כלים מקבלת עכשיו בחזרה קריאה לכלי, בזרימה או בתשובה אחת, והתור שאחריו,\n  עם תוצאות הכלים, מקבל את התשובה. נבנה בשביל התוסף Extended OpenAI Conversation,\n  כך שפקודה קולית מדליקה אור בלי שדבר יוצא מהמכונות שלכם. גם התבנית הישנה של\n  פונקציות עובדת.\n- רק מודלים שיודעים לקרוא לכלים משמשים לזה (כל מכונה מדווחת עליהם); בקשה למודל שלא\n  יודע מקבלת שגיאה ברורה עם רשימת המודלים שכן יודעים. בקשה עם כלים אף פעם לא נשלחת\n  לענן, נשארת על אותו מודל ואותה מכונה לאורך כל השיחה, ואף פעם לא מסוכמת.",
   "files": {
     "exe": {
-      "name": "llm-api-setup-4.13.1.exe",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.1/llm-api-setup-4.13.1.exe",
-      "sha256": "fb2c6b5269a36ba2b9b7cefce40f85a802c4e61f77a47e816f953e5cb15f5976",
-      "size": 29387773
+      "name": "llm-api-setup-4.14.0.exe",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.14.0/llm-api-setup-4.14.0.exe",
+      "sha256": "0a21b6c6626c76bb31fd0069c894d7cea32414db693127cdda4e67ae593217af",
+      "size": 29501900
     },
     "tar": {
-      "name": "llm-api-4.13.1.tar.gz",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.1/llm-api-4.13.1.tar.gz",
-      "sha256": "64c74d53df12ed6ba22a3ea295147ad205166d58ecca937554b982b5d722921a",
-      "size": 381557
+      "name": "llm-api-4.14.0.tar.gz",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.14.0/llm-api-4.14.0.tar.gz",
+      "sha256": "6adbf182371ace102f58d82c01a3532d6730e98059f93de8e7801b1a00ea9b33",
+      "size": 390309
     },
     "zip": {
-      "name": "llm-api-4.13.1.zip",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.13.1/llm-api-4.13.1.zip",
-      "sha256": "5696e183eec58e4ccb3f46e8278c54c8448a7981a3ac0b8cb90a1ba1acab087c",
-      "size": 405575
+      "name": "llm-api-4.14.0.zip",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.14.0/llm-api-4.14.0.zip",
+      "sha256": "3cd858e997b92829d5232c7365f9bb78d260ae2b7c9be94a932c310d5fa13f31",
+      "size": 414630
     }
   }
 }
