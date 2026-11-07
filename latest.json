@@ -1,28 +1,28 @@
 {
-  "version": "4.15.0",
-  "tag": "v4.15.0",
-  "released": "2026-11-07",
+  "version": "4.16.0",
+  "tag": "v4.16.0",
+  "released": "2026-11-08",
   "page": "https://yaarilevrosen-cpu.github.io/llm-api-releases/",
-  "notes_en": "- **Console accounts:** the console now has several accounts, each with a\n  username and a password, as an admin or a user. An admin adds people on the new\n  Users page (with a one-time password they replace at their first login), and\n  can disable, reset, promote or delete them. Users get the chat and their own\n  password, nothing else. Each user's chat runs under a key of their own, so the\n  admin sets their limits with the same controls as access keys, and sees their\n  usage. The existing password becomes the account \"admin\", so nobody is locked\n  out by the update.\n- Two people sharing one browser no longer see each other's conversations.",
-  "notes_he": "- **חשבונות בממשק הניהול:** לממשק יש עכשיו כמה חשבונות, לכל אחד שם משתמש וסיסמה,\n  כמנהל או כמשתמש. מנהל מוסיף אנשים בעמוד המשתמשים החדש (עם סיסמה חד־פעמית שמחליפים\n  בכניסה הראשונה), ויכול להשבית, לאפס, לקדם או למחוק. משתמש רגיל מקבל רק את הצ'אט\n  ואת הסיסמה שלו. הצ'אט של כל משתמש רץ עם מפתח משלו, כך שהמנהל קובע לו מגבלות באותם\n  כלים של מפתחות הגישה ורואה כמה השתמש. הסיסמה הקיימת הופכת לחשבון \"admin\", כך\n  שאף אחד לא ננעל בחוץ בגלל העדכון.\n- שני אנשים שמשתמשים באותו דפדפן כבר לא רואים את השיחות זה של זה.",
+  "notes_en": "- **Home network access:** a new setting, Settings > Home network (LAN), lets\n  devices on your home network (addresses 10.x, 172.16-31.x, 192.168.x and\n  private IPv6) use the API and the console just like your Tailscale machines -\n  for example a Home Assistant server that has no Tailscale. It is off for new\n  installs (`--lan` turns it on at install time); with it off, such devices are\n  refused with a message that says where to turn it on. Installs that were\n  already set to \"anything on my local network\" keep working as before.\n  Requests from the internet (Funnel) never count as the home network, whatever\n  address they claim, and a direct connection from a public address is treated\n  like the internet.\n- With home network access on, a machine that listens on its Tailscale address\n  also listens on its home network address after its next restart.\n- **Always-loaded models:** Settings > Routing has a new field for models that\n  stay loaded for good, so the first request of the day does not wait for the\n  model to load.\n- Fixed: a request right after another one could be refused as \"busy\" for up\n  to 10 seconds although the machine had already answered.\n- Fixed: `keep_alive: \"-1\"` (keep the model loaded) was refused by Ollama 0.40;\n  it is now sent in the form Ollama accepts.",
+  "notes_he": "- **גישה מרשת הבית:** הגדרה חדשה, הגדרות > רשת הבית, מאפשרת למכשירים ברשת הבית\n  (כתובות 10.x, ‏172.16-31.x, ‏192.168.x וכתובות IPv6 פרטיות) להשתמש בממשק ובמסוף\n  בדיוק כמו המחשבים שמחוברים ל־Tailscale, למשל שרת Home Assistant בלי Tailscale.\n  בהתקנה חדשה היא כבויה (`--lan` מדליק אותה בזמן ההתקנה), וכשהיא כבויה מכשירים\n  כאלה נחסמים עם הודעה שאומרת איפה מדליקים אותה. התקנות שכבר הוגדרו \"כל מי שברשת\n  המקומית\" ממשיכות לעבוד כמו קודם. בקשה מהאינטרנט (Funnel) אף פעם לא נחשבת לרשת\n  הבית, לא משנה איזו כתובת היא טוענת, וחיבור ישיר מכתובת ציבורית נחשב לאינטרנט.\n- כשהגישה מרשת הבית דולקת, מחשב שמאזין לכתובת של Tailscale מאזין גם לכתובת שלו\n  ברשת הבית, אחרי ההפעלה הבאה שלו.\n- **מודלים שנשארים טעונים:** בהגדרות > ניתוב יש שדה חדש למודלים שנשארים טעונים\n  תמיד, כדי שהבקשה הראשונה של היום לא תחכה לטעינת המודל.\n- תוקן: בקשה מיד אחרי בקשה אחרת יכלה להידחות כ\"עסוק\" עד 10 שניות, למרות שהמחשב\n  כבר ענה.\n- תוקן: `keep_alive: \"-1\"` (להשאיר את המודל טעון) נדחה על ידי Ollama 0.40; עכשיו\n  הוא נשלח בצורה ש־Ollama מקבל.",
   "files": {
     "exe": {
-      "name": "llm-api-setup-4.15.0.exe",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.15.0/llm-api-setup-4.15.0.exe",
-      "sha256": "303a94f1e05f639f635f74512ad0aee79e6efdf44d9b53b384a68572fa132a46",
-      "size": 29504889
+      "name": "llm-api-setup-4.16.0.exe",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.16.0/llm-api-setup-4.16.0.exe",
+      "sha256": "1cd08da494427659c28c5fe035d78780690d8d232e1b28ec3d476dcc7d60ba2e",
+      "size": 29508016
     },
     "tar": {
-      "name": "llm-api-4.15.0.tar.gz",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.15.0/llm-api-4.15.0.tar.gz",
-      "sha256": "7c628cdf934e83723c6d025c664357e95c79518275e033a0913d1fe170430023",
-      "size": 398546
+      "name": "llm-api-4.16.0.tar.gz",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.16.0/llm-api-4.16.0.tar.gz",
+      "sha256": "f3ab1a5a1242bb0a4ad56b5f14ac9737d86c63576febfb77c128b5c042bb8859",
+      "size": 403473
     },
     "zip": {
-      "name": "llm-api-4.15.0.zip",
-      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.15.0/llm-api-4.15.0.zip",
-      "sha256": "e62eb6fa24e748919a2de35e0b4a7cb028905aa51f2a8260c69424fce468da44",
-      "size": 422861
+      "name": "llm-api-4.16.0.zip",
+      "url": "https://github.com/yaarilevrosen-cpu/llm-api-releases/releases/download/v4.16.0/llm-api-4.16.0.zip",
+      "sha256": "47112459a58f29bff56bc9cd4e69f8f08fcb9b42f3ab708bf893197fd6d06e77",
+      "size": 427960
     }
   }
 }
